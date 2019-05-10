@@ -14,16 +14,15 @@ module TicTacToeDesign =
     type SpacePosition = HorizontalPosition * VerticalPosition
 
     //board spaces
-    //Spaces either empty or used 
-    //(used when an X or O is placed on them)
-    //space made of its position and state
+    //Spaces either empty or taken
+    //(taken when an X or O is placed on them)
     type SpaceSate = Taken of Player | Empty
 
+    //space made of its position and state
     type Space = {
         position : SpacePosition 
         state : SpaceSate
     }
-
 
     //player position
     //postion player puts a counter on their turn
@@ -44,6 +43,7 @@ module TicTacToeDesign =
     //GameState is updated to save all the taken positions by 
     //adding this position to the other taken 1s from previous turns
     //input -> output
+    //Gamestate is being called from the logic module so that it is private as players shouldn't see this
     type PlayerXPlacesCounter<'GameState> = 'GameState * PlayerXPosition -> 'GameState * TurnResult
     type PlayerOPlacesCounter<'GameState> = 'GameState * PlayerOPosition -> 'GameState * TurnResult
     //New game made by resetting TurnResult and GameState
