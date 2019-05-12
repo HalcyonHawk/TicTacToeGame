@@ -1,0 +1,70 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+    <Grid ShowGridLines="True" Width="400" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" CommandParameter="0x0" Command="{Binding ChangeShape}"  Margin="12,0,11,0">
+            <StackPanel>
+                <Image Source="{Binding Shape0}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="1" CommandParameter="0x1" Command="{Binding ChangeShape}" Margin="12,0" >
+            <StackPanel>
+                <Image Source="{Binding Shape1}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="2" CommandParameter="0x2" Command="{Binding ChangeShape}" Margin="11,0,12,0">
+            <StackPanel>
+                <Image Source="{Binding Shape2}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="0" CommandParameter="1x0" Command="{Binding ChangeShape}" Margin="12,0,11,0">
+            <StackPanel>
+                <Image Source="{Binding Shape3}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" CommandParameter="1x1" Command="{Binding ChangeShape}" Margin="12,0">
+            <StackPanel>
+                <Image Source="{Binding Shape4}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2" CommandParameter="1x2" Command="{Binding ChangeShape}" Margin="11,0,12,0">
+            <StackPanel>
+                <Image Source="{Binding Shape5}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0" CommandParameter="2x0" Command="{Binding ChangeShape}" Margin="12,0,11,0">
+            <StackPanel>
+                <Image Source="{Binding Shape6}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1" CommandParameter="2x1" Command="{Binding ChangeShape}" Margin="12,0">
+            <StackPanel>
+                <Image Source="{Binding Shape7}" />
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" CommandParameter="2x2" Command="{Binding ChangeShape}" Margin="11,0,12,0">
+            <StackPanel>
+                <Image Source="{Binding Shape8}" />
+            </StackPanel>
+        </Button>
+        <Label Content="Player's Turn: " FontSize="21" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Margin="0,21,0,0" />
+        <Image Source="cross.png" Grid.Row="3" Grid.Column="1" Width="35" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+    </Grid>
+
+</Window>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TicTacToe", "TicTacToe\TicTacToe.fsproj", "{A335C73A-965D-4DAE-925B-4AFF3D8178CA}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TicTacToe", "TicTacToe\TicTacToe.fsproj", "{D261535D-460F-48D6-8983-6ABDF31BBD94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Views", "TicTacToe.Views\TicTacToe.Views.csproj", "{55995321-AF96-4E8A-9A70-14EFC61D607F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A335C73A-965D-4DAE-925B-4AFF3D8178CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A335C73A-965D-4DAE-925B-4AFF3D8178CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A335C73A-965D-4DAE-925B-4AFF3D8178CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A335C73A-965D-4DAE-925B-4AFF3D8178CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D261535D-460F-48D6-8983-6ABDF31BBD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D261535D-460F-48D6-8983-6ABDF31BBD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D261535D-460F-48D6-8983-6ABDF31BBD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D261535D-460F-48D6-8983-6ABDF31BBD94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55995321-AF96-4E8A-9A70-14EFC61D607F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55995321-AF96-4E8A-9A70-14EFC61D607F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55995321-AF96-4E8A-9A70-14EFC61D607F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55995321-AF96-4E8A-9A70-14EFC61D607F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6CE9C08C-4030-4731-BA08-DEE24C580FB4}
+		SolutionGuid = {13CAAAA3-5783-4D97-8C7E-276B4136AE70}
 	EndGlobalSection
 EndGlobal
