@@ -73,5 +73,6 @@
         <Label Content="{Binding PlayerOScore}" FontSize="21" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom"/>
         <Label Content="Player Vs AI: " FontSize="21" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
         <CheckBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding PvAI}"/>
+        <Button Content="Reset" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding Reset}" Height="30" Width="60"/>
     </Grid>
 </Window>

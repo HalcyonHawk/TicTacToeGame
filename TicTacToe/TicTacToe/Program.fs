@@ -68,7 +68,7 @@ let init () =
         Won = None
         PlayerXScore = 0
         PlayerOScore = 0
-        PvAI = true
+        PvAI = false
     }
 
 
@@ -123,7 +123,7 @@ let doMove p m =
             let record = m.Spaces
             let x ={m with 
                         Spaces = 
-                            Spaces |> update 0 {position=(Left, Top); 
+                            record |> update 0 {position=(Left, Top); 
                             state=Taken m.CurrentPlayer; 
                             image = if m.CurrentPlayer = PlayerX 
                                     then "cross.png" 
@@ -253,13 +253,14 @@ let doMove p m =
 
 type Msg =
     | ChangeShape of string
-    | AddPoint of Player
+    | Reset 
 
 let update msg m =
     match msg with
         //ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function
         //doMove takes then position and current model as paramenters
         | ChangeShape p -> doMove p m
+        | Reset -> init()
 
 open Elmish.WPF
 
@@ -282,6 +283,7 @@ let bindings model dispatch =
         "PlayerXScore" |> Binding.oneWay (fun m -> m.PlayerXScore)
         "PlayerOScore" |> Binding.oneWay (fun m -> m.PlayerOScore)
         "PvAI" |> Binding.oneWay (fun m -> m.PvAI)
+        "Reset" |> Binding.cmd (fun _ -> Reset)
     ]
 
 
