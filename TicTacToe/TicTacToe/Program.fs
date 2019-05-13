@@ -89,7 +89,7 @@ let allPossibleLines m : Space list list =
         [m.Spaces.[2]; m.Spaces.[4]; m.Spaces.[6]]]
    
 //Questions
-//How do I check if the player has won
+//How do I check if the player has won/drawn
 //How do I branch away from the game loop when someone has won instead of waiting for another move
 //How do I let the player chose playing vs AI or a person and how do I change the behaviour of the game accordingly
 //How do messages work and can I use them to run code
