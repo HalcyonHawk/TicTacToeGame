@@ -8,7 +8,7 @@ open FSharpx.Collections
 ////game design
 //module TicTacToeDesign =
 //players X and O
-type Player = PlayerX | PlayerO 
+type Player = PlayerX | PlayerO | None
 
 //board positions
 //board made of horizontal and vertical components
@@ -16,6 +16,7 @@ type HorizontalPosition = Left | CenterH | Right
 type VerticalPosition = Top | CenterV | Bottom
 type SpacePosition = HorizontalPosition * VerticalPosition
 
+type Line = Line of SpacePosition list
 //board spaces
 //Spaces either empty or used 
 //(used when an X or O is placed on them)
@@ -53,69 +54,67 @@ type Model =
     {   CurrentPlayer: Player 
         Shape: string
         Spaces: PersistentVector<Space>
+        Won: Player 
+        PlayerXScore: int
+        PlayerOScore: int
+        PvAI: bool
     }
     
 let init () =
-    {   //StepSize = 1 
+    {   
         CurrentPlayer = PlayerX
         Shape = "cross.jpg"
         Spaces = Spaces
-        //{position = (Left, Top); state = Empty; image = "dash.png"}
-        //{position = (CenterH, Top); state = Empty; image = "dash.png"}
-        //{position = (Right, Top); state = Empty; image = "dash.png"}
-        //{position = (Left, CenterV); state = Empty; image = "dash.png"}
-        //{position = (CenterH, CenterV); state = Empty; image = "dash.png"}
-        //{position = (Right, CenterV); state = Empty; image = "dash.png"}
-        //{position = (Left, Bottom); state = Empty; image = "dash.png"}
-        //{position = (CenterH, Bottom); state = Empty; image = "dash.png"}
-        //{position = (Right, Bottom); state = Empty; image = "dash.png"}
-        //|]
+        Won = None
+        PlayerXScore = 0
+        PlayerOScore = 0
+        PvAI = true
     }
 
-//player position
-//postion player puts a counter on their turn
-type PlayerXPosition = PlayerXPosition of SpacePosition
-type PlayerOPosition = PlayerOPosition of SpacePosition
-
-//vaild places player can put a counter on their turn
-//places to put a counter decided from making a list of the positions taken
-type PlayerXValidPlaces = PlayerXPosition list
-type PlayerOValidPlaces = PlayerOPosition list
-
-//turn 
-type TurnResult = 
-    | PlayerXTurn of PlayerXValidPlaces
-    | PlayerOTurn of PlayerOValidPlaces
-    | WinGame of Player
-//When a player places their counter, this position is then taken.
-//GameState is updated to save all the taken positions by 
-//adding this position to the other taken 1s from previous turns
-//input -> output
-type PlayerXPlacesCounter<'GameState> = 'GameState * PlayerXPosition -> 'GameState * TurnResult
-type PlayerOPlacesCounter<'GameState> = 'GameState * PlayerOPosition -> 'GameState * TurnResult
-//New game made by resetting TurnResult and GameState
-type NewGame<'GameState> = 'GameState * TurnResult
 
 
 ////game logic 
 //module TicTacToeLogic =
 
-
     
-let updateElement key f st = 
-    st |> Array.map (fun (k, v) -> if k = key then k, f v else k, v)
+/// a list of eight lines to check for 3 in a row
+let allPossibleLines m : Space list list = 
+        [[m.Spaces.[0]; m.Spaces.[1]; m.Spaces.[2]]; 
+        [m.Spaces.[3]; m.Spaces.[4]; m.Spaces.[5]];
+        [m.Spaces.[6]; m.Spaces.[7]; m.Spaces.[8]];
+        [m.Spaces.[0]; m.Spaces.[3]; m.Spaces.[6]];
+        [m.Spaces.[1]; m.Spaces.[4]; m.Spaces.[7]];
+        [m.Spaces.[2]; m.Spaces.[5]; m.Spaces.[8]];
+        [m.Spaces.[0]; m.Spaces.[4]; m.Spaces.[8]];
+        [m.Spaces.[2]; m.Spaces.[4]; m.Spaces.[6]]]
+   
+//Questions
+//How do I check if the player has won
+//How do I branch away from the game loop when someone has won instead of waiting for another move
+//How do I let the player chose playing vs AI or a person and how do I change the behaviour of the game accordingly
+//How do messages work and can I use them to run code
+let checkGameWon m = 
+    let record = m
+    for line in allPossibleLines m do 
+        match line.[0].state, line.[1].state, line.[2].state with
+            | Taken PlayerX, Taken PlayerX, Taken PlayerX -> (fun _ -> record.PlayerXScore = record.PlayerXScore + 1)
+            | Taken PlayerO, Taken PlayerO, Taken PlayerO -> (fun _ -> record.PlayerOScore = record.PlayerOScore + 1)
+            | _ -> (fun _ -> false)
+        //match line.[0].state, line.[1].state, line.[2].state with
+        //    | Taken PlayerX, Taken PlayerX, Taken PlayerX -> {m with Won = PlayerX}
+        //    | Taken PlayerO, Taken PlayerO, Taken PlayerO -> {m with Won = PlayerO}
+        //    | Empty, _, _ -> {m with Won = None}
+        //    | _, Empty, _ -> {m with Won = None}
+        //    | _, _, Empty -> {m with Won = None}
+        //m.Won = if line.[0].state = Taken player && line.[1].state = Taken player && line.[2].state = Taken player then true else false
+    record
 
-let replace index sub = Array.mapi (fun i x -> if i = index then sub else x)
-
-    
-    
 let changePlayer m = 
     match m.CurrentPlayer with
     | PlayerX -> {m with CurrentPlayer = PlayerO}
     | PlayerO -> {m with CurrentPlayer = PlayerX}
 
-//PROBLEM: Change player is being called in domove with old model since domove is supposed to modify and 
-//return a model
+
 let doMove p m = 
     match p with 
     | "0x0" -> 
@@ -128,7 +127,7 @@ let doMove p m =
                             state=Taken m.CurrentPlayer; 
                             image = if m.CurrentPlayer = PlayerX 
                                     then "cross.png" 
-                                    else "circle.jpg"}} |> changePlayer 
+                                    else "circle.jpg"}} |> checkGameWon |> changePlayer 
             x
         | Taken _ -> m
     | "0x1" -> match m.Spaces.[1].state with
@@ -142,7 +141,7 @@ let doMove p m =
                                             state=Taken m.CurrentPlayer; 
                                             image = if m.CurrentPlayer = PlayerX 
                                                     then "cross.png" 
-                                                    else "circle.jpg"}} |> changePlayer 
+                                                    else "circle.jpg"}} |> checkGameWon |> changePlayer 
                     x
                 | Taken _ -> m
     | "0x2" -> match m.Spaces.[2].state with
@@ -156,7 +155,7 @@ let doMove p m =
                                             state=Taken m.CurrentPlayer; 
                                             image = if m.CurrentPlayer = PlayerX 
                                                     then "cross.png" 
-                                                    else "circle.jpg"}} |> changePlayer 
+                                                    else "circle.jpg"}} |> checkGameWon |> changePlayer 
                     x
                 | Taken _ -> m
     | "1x0" -> match m.Spaces.[3].state with
@@ -245,71 +244,31 @@ let doMove p m =
                 | Taken _ -> m
     | _ -> changePlayer m 
         
-      
-//if p = "0x0" then m  
-//    m with CurrentPlayer = PlayerO}
-
-    
-
-//TODO: List horizontal positions 
-
-
-//TODO: List vertial positions 
-
-
-//TODO: Line of SpacePostions list
-
-
-//TODO: Check for 3 in a row
-    //3 in a row vertial lines 
-    //3 in a row horizontal lines 
-    //diagonal 
-    //other diagonal 
-
-//TODO: Check lines for win
 
 //TODO: Check for draw
 
-
-//game user interface
-//module TicTacToeInterface =
-
 //open TicTacToeDesign
-
-
-
-//if CurrentPlayer = PlayerX then "cross.jpg" else "circle.jpg"
-
 
 //open TicTacToeLogic
 
 type Msg =
     | ChangeShape of string
-    //| Increment
-    //| SetStepSize of int
-    //| Reset 
+    | AddPoint of Player
 
 let update msg m =
     match msg with
-        //| ChangeShape -> {m with Shape = if m.CurrentPlayer = PlayerX then "cross.jpg" else "circle.jpg"}
-
         //ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function
         //doMove takes then position and current model as paramenters
         | ChangeShape p -> doMove p m
-        //| Increment -> { m with Count = m.Count + m.StepSize }
-        //| SetStepSize x -> { m with StepSize = x }
-        //| Reset -> init ()
 
 open Elmish.WPF
 
 let bindings model dispatch =
     [
-        //"ChangeShape" |> Binding.cmd (fun m -> ChangeShape)
         
         //ChangeShape calls function with coordinate parameter declared in the XAML
         //Pipes position parameter from XAML into ChangeShape then doMove 
         "ChangeShape" |> Binding.paramCmd (fun p m -> string p |> ChangeShape)
-        //TODO:TRY TWO WAY BINDINGS, LOOK UP XAML TUTORIAL ON IT
         "Shape0" |> Binding.oneWay (fun m -> m.Spaces.[0].image)
         "Shape1" |> Binding.oneWay (fun m -> m.Spaces.[1].image)
         "Shape2" |> Binding.oneWay (fun m -> m.Spaces.[2].image)
@@ -320,11 +279,9 @@ let bindings model dispatch =
         "Shape7" |> Binding.oneWay (fun m -> m.Spaces.[7].image)
         "Shape8" |> Binding.oneWay (fun m -> m.Spaces.[8].image)
         "CurrentPlayer" |> Binding.oneWay (fun m -> if m.CurrentPlayer = PlayerX then "cross.png" else "circle.jpg")
-        //"CounterValue" |> Binding.oneWay (fun m -> m.Count)
-        //"Increment" |> Binding.cmd (fun m -> Increment)
-        //"StepSize" |> Binding.twoWay
-        //  (fun m -> float m.StepSize)
-        //  (fun newVal m -> int newVal |> SetStepSize)
+        "PlayerXScore" |> Binding.oneWay (fun m -> m.PlayerXScore)
+        "PlayerOScore" |> Binding.oneWay (fun m -> m.PlayerOScore)
+        "PvAI" |> Binding.oneWay (fun m -> m.PvAI)
     ]
 
 
