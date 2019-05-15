@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Hubert\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Hubert\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_TicTacToe.359758115.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TicTacToe" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="AssemblyInfo.fs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.fs" t="Include" />
+        <e p="TicTacToe.fsproj" t="IncludeRecursive" />
+      </e>
+      <e p="TicTacToe.sln" t="IncludeFlat" />
+      <e p="TicTacToe.Views" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="circle.jpg" t="Include" />
+        <e p="cross.png" t="Include" />
+        <e p="dash.png" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="TicTacToe.Views.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

@@ -58,3 +58,6 @@ C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTac
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.csproj.CoreCompileInputs.cache
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.exe
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.pdb
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.g.cs
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.baml
