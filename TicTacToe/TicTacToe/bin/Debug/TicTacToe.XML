@@ -2,7 +2,12 @@
 <doc>
 <assembly><name>TicTacToe</name></assembly>
 <members>
-<member name="M:TicTacToe.Program.allPossibleLines(TicTacToe.Program.Model)">
+<member name="M:TicTacToe.Program.PvAIWin.allPossibleLines(TicTacToe.Program.PvAIWin.Model)">
+<summary>
+ a list of eight lines to check for 3 in a row
+</summary>
+</member>
+<member name="M:TicTacToe.Program.PvPWin.allPossibleLines(TicTacToe.Program.PvPWin.Model)">
 <summary>
  a list of eight lines to check for 3 in a row
 </summary>

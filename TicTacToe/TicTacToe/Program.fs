@@ -5,6 +5,7 @@ open System.Windows
 open Elmish
 open Elmish.WPF
 open FSharpx.Collections
+open TicTacToe.Views
 
 ////game design
 //module TicTacToeDesign =
@@ -516,13 +517,13 @@ module App =
     let showWin1 () =
         Application.Current.Dispatcher.Invoke(fun () ->
             let pvpWin = MainWindow()
-            pvpWin.DataContext <- Application.Current.MainMenu.DataContext
+            pvpWin.DataContext <- Application.Current.MainWindow.DataContext
             pvpWin.Show())
 
     let showWin2 () =
         Application.Current.Dispatcher.Invoke(fun () ->
             let pvaiWin = MainWindow()
-            pvaiWin.DataContext <- Application.Current.MainMenu.DataContext
+            pvaiWin.DataContext <- Application.Current.MainWindow.DataContext
             pvaiWin.Show())
 
     let update msg m =  
@@ -533,16 +534,17 @@ module App =
 
     let bindings model dispatch =
         [ 
-            "ShowWin1" |> Binding.cmd (fun m -> ShowWin1)
-            "ShowWin2" |> Binding.cmd (fun m -> ShowWin2)
+            "PvAI" |> Binding.cmd (fun m -> ShowWin1)
+            "PvP" |> Binding.cmd (fun m -> ShowWin2)
             "MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
-            "MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
+            //"MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
         ]
     
 [<EntryPoint; STAThread>]
-let main argv = 
-    Program.mkSimple App.init App.update App.bindings
-    |> Program.withConsoleTrace
-    |> Program.runWindowWithConfig
-        { ElmConfig.Default with LogConsole = true }
-        (MainMenu())
+let main argv =
+  Program.mkProgram App.init App.update App.bindings
+  |> Program.withConsoleTrace
+  |> Program.runWindowWithConfig
+      { ElmConfig.Default with LogConsole = true }
+      (MainMenu())
+

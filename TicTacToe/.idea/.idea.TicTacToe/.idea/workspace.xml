@@ -1,10 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="643c551d-d0a8-4422-b80a-7c5398885b47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/TicTacToe/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TicTacToe/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TicTacToe/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Views/obj/Debug/TicTacToe.Views_MarkupCompile.i.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/Program.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.fsproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.fsproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.fsprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.fsprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/obj/Debug/TicTacToe.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/obj/TicTacToe.fsprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/obj/TicTacToe.fsprojAssemblyReference.cache" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/Program.fs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="669">
+              <caret line="541" column="36" lean-forward="true" selection-start-line="541" selection-start-column="36" selection-end-line="541" selection-end-column="36" />
+              <folding>
+                <marker date="1557953079943" expanded="true" signature="24:24915" ph=" ..." />
+                <marker date="1557953079943" expanded="false" signature="30:151" ph="..." />
+                <marker date="1557953079943" expanded="true" signature="169:213" ph="//module TicTacToeDesign = ..." />
+                <marker date="1557953079943" expanded="true" signature="254:322" ph="//board positions ..." />
+                <marker date="1557953079943" expanded="true" signature="519:645" ph="//board spaces ..." />
+                <marker date="1557953079943" expanded="true" signature="701:12108" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="720:812" ph="= { ..." />
+                <marker date="1557953079943" expanded="true" signature="874:1608" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="1625:1801" ph="= ..." />
+                <marker date="1557953079943" expanded="true" signature="1635:1801" ph="{   CurrentPlayer: Player  ..." />
+                <marker date="1557953079943" expanded="true" signature="1819:1998" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="1831:1997" ph="    ..." />
+                <marker date="1557953079943" expanded="true" signature="2013:2062" ph="= ..." />
+                <marker date="1557953079943" expanded="true" signature="2023:2062" ph="| ChangeShape of string ..." />
+                <marker date="1557953079943" expanded="true" signature="2154:2625" ph=" : Space list list =  ..." />
+                <marker date="1557953079943" expanded="true" signature="2189:2624" ph="[m.Spaces.[0]; m.Spaces.[1]; m.Spaces.[2]];  ..." />
+                <marker date="1557953079943" expanded="true" signature="2672:3167" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="2697:2984" ph=" = List.tryFind (fun (elem: Space list) -&gt; ..." />
+                <marker date="1557953079943" expanded="true" signature="2809:2978" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="3192:3468" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="3269:3468" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="3496:3642" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="3534:3642" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="3663:10554" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="3687:10554" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="3704:4281" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="3766:4254" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="3830:4235" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="3931:4201" ph="position=(Left, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="4084:4201" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="4297:5074" ph=" -&gt; match m.Spaces.[1].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="4358:5039" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="4438:5012" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="4641:4978" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="4829:4978" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="5090:5867" ph=" -&gt; match m.Spaces.[2].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="5151:5832" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="5231:5805" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="5434:5771" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="5622:5771" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="5883:6643" ph=" -&gt; match m.Spaces.[3].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="5944:6608" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="6024:6581" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="6226:6563" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="6414:6563" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="6659:7420" ph=" -&gt; match m.Spaces.[4].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="6720:7385" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="6800:7358" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="7003:7340" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="7191:7340" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="7436:8196" ph=" -&gt; match m.Spaces.[5].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="7497:8161" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="7577:8134" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="7779:8116" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="7967:8116" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="8212:8972" ph=" -&gt; match m.Spaces.[6].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="8273:8937" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="8353:8910" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="8555:8892" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="8743:8892" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="8988:9748" ph=" -&gt; match m.Spaces.[7].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="9049:9713" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="9129:9686" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="9331:9668" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="9519:9668" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="9764:10524" ph=" -&gt; match m.Spaces.[8].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="9825:10489" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="9905:10462" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="10107:10444" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="10295:10444" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="10578:10869" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="10603:10869" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="10616:10799" ph="//ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function ..." />
+                <marker date="1557953079943" expanded="true" signature="10891:12108" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="10903:12107" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="10916:11069" ph="//ChangeShape calls function with coordinate parameter declared in the XAML ..." />
+                <marker date="1557953079943" expanded="true" signature="12124:23531" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="12143:12235" ph="= { ..." />
+                <marker date="1557953079943" expanded="true" signature="12297:13031" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="13048:13224" ph="= ..." />
+                <marker date="1557953079943" expanded="true" signature="13058:13224" ph="{   CurrentPlayer: Player  ..." />
+                <marker date="1557953079943" expanded="true" signature="13242:13421" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="13254:13420" ph="    ..." />
+                <marker date="1557953079943" expanded="true" signature="13436:13485" ph="= ..." />
+                <marker date="1557953079943" expanded="true" signature="13446:13485" ph="| ChangeShape of string ..." />
+                <marker date="1557953079943" expanded="true" signature="13577:14048" ph=" : Space list list =  ..." />
+                <marker date="1557953079943" expanded="true" signature="13612:14047" ph="[m.Spaces.[0]; m.Spaces.[1]; m.Spaces.[2]];  ..." />
+                <marker date="1557953079943" expanded="true" signature="14095:14590" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="14120:14407" ph=" = List.tryFind (fun (elem: Space list) -&gt; ..." />
+                <marker date="1557953079943" expanded="true" signature="14232:14401" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="14615:14891" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="14692:14891" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="14919:15065" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="14957:15065" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="15086:21977" ph=" =  ..." />
+                <marker date="1557953079943" expanded="true" signature="15110:21977" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="15127:15704" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="15189:15677" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="15253:15658" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="15354:15624" ph="position=(Left, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="15507:15624" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="15720:16497" ph=" -&gt; match m.Spaces.[1].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="15781:16462" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="15861:16435" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="16064:16401" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="16252:16401" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="16513:17290" ph=" -&gt; match m.Spaces.[2].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="16574:17255" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="16654:17228" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="16857:17194" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="17045:17194" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="17306:18066" ph=" -&gt; match m.Spaces.[3].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="17367:18031" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="17447:18004" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="17649:17986" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="17837:17986" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="18082:18843" ph=" -&gt; match m.Spaces.[4].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="18143:18808" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="18223:18781" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="18426:18763" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="18614:18763" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="18859:19619" ph=" -&gt; match m.Spaces.[5].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="18920:19584" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="19000:19557" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="19202:19539" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="19390:19539" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="19635:20395" ph=" -&gt; match m.Spaces.[6].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="19696:20360" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="19776:20333" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="19978:20315" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="20166:20315" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="20411:21171" ph=" -&gt; match m.Spaces.[7].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="20472:21136" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="20552:21109" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="20754:21091" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="20942:21091" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="21187:21947" ph=" -&gt; match m.Spaces.[8].state with ..." />
+                <marker date="1557953079943" expanded="true" signature="21248:21912" ph=" -&gt;  ..." />
+                <marker date="1557953079943" expanded="true" signature="21328:21885" ph=" ={m with  ..." />
+                <marker date="1557953079943" expanded="true" signature="21530:21867" ph="position=(CenterH, Top);  ..." />
+                <marker date="1557953079943" expanded="true" signature="21718:21867" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="22001:22292" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="22026:22292" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="22039:22222" ph="//ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function ..." />
+                <marker date="1557953079943" expanded="true" signature="22314:23531" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="22326:23530" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="22339:22492" ph="//ChangeShape calls function with coordinate parameter declared in the XAML ..." />
+                <marker date="1557953079943" expanded="true" signature="23543:24671" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="23561:23655" ph="=  ..." />
+                <marker date="1557953079943" expanded="true" signature="23572:23655" ph="{   ..." />
+                <marker date="1557953079943" expanded="true" signature="23672:23755" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="23683:23755" ph="{   PvPWin = PvPWin.init  ..." />
+                <marker date="1557953079943" expanded="true" signature="23770:23873" ph="= ..." />
+                <marker date="1557953079943" expanded="true" signature="23780:23873" ph="| ShowWin1 ..." />
+                <marker date="1557953079943" expanded="true" signature="23894:24094" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="23949:24093" ph=" -&gt; ..." />
+                <marker date="1557953079943" expanded="true" signature="24115:24318" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="24170:24317" ph=" -&gt; ..." />
+                <marker date="1557953079943" expanded="true" signature="24340:24499" ph=" =   ..." />
+                <marker date="1557953079943" expanded="true" signature="24367:24499" ph=" ..." />
+                <marker date="1557953079943" expanded="true" signature="24532:24671" ph=" = ..." />
+                <marker date="1557953079943" expanded="true" signature="24544:24670" ph="  ..." />
+                <marker date="1557953079943" expanded="true" signature="24717:24915" ph=" =  ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Program.fs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TicTacToe" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TicTacToe" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TicTacToe" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TicTacToe" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TicTacToe.Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -13,6 +256,18 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
@@ -33,5 +288,249 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="643c551d-d0a8-4422-b80a-7c5398885b47" name="Default Changelist" comment="" />
+      <created>1557953139708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557953139708</updated>
+      <workItem from="1557953143740" duration="661000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="661000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="541" column="36" lean-forward="true" selection-start-line="541" selection-start-column="36" selection-end-line="541" selection-end-column="36" />
+          <folding>
+            <marker date="1557953079943" expanded="true" signature="24:24915" ph=" ..." />
+            <marker date="1557953079943" expanded="false" signature="30:151" ph="..." />
+            <marker date="1557953079943" expanded="true" signature="169:213" ph="//module TicTacToeDesign = ..." />
+            <marker date="1557953079943" expanded="true" signature="254:322" ph="//board positions ..." />
+            <marker date="1557953079943" expanded="true" signature="519:645" ph="//board spaces ..." />
+            <marker date="1557953079943" expanded="true" signature="701:12108" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="720:812" ph="= { ..." />
+            <marker date="1557953079943" expanded="true" signature="874:1608" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="1625:1801" ph="= ..." />
+            <marker date="1557953079943" expanded="true" signature="1635:1801" ph="{   CurrentPlayer: Player  ..." />
+            <marker date="1557953079943" expanded="true" signature="1819:1998" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="1831:1997" ph="    ..." />
+            <marker date="1557953079943" expanded="true" signature="2013:2062" ph="= ..." />
+            <marker date="1557953079943" expanded="true" signature="2023:2062" ph="| ChangeShape of string ..." />
+            <marker date="1557953079943" expanded="true" signature="2154:2625" ph=" : Space list list =  ..." />
+            <marker date="1557953079943" expanded="true" signature="2189:2624" ph="[m.Spaces.[0]; m.Spaces.[1]; m.Spaces.[2]];  ..." />
+            <marker date="1557953079943" expanded="true" signature="2672:3167" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="2697:2984" ph=" = List.tryFind (fun (elem: Space list) -&gt; ..." />
+            <marker date="1557953079943" expanded="true" signature="2809:2978" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="3192:3468" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="3269:3468" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="3496:3642" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="3534:3642" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="3663:10554" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="3687:10554" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="3704:4281" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="3766:4254" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="3830:4235" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="3931:4201" ph="position=(Left, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="4084:4201" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="4297:5074" ph=" -&gt; match m.Spaces.[1].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="4358:5039" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="4438:5012" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="4641:4978" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="4829:4978" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="5090:5867" ph=" -&gt; match m.Spaces.[2].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="5151:5832" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="5231:5805" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="5434:5771" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="5622:5771" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="5883:6643" ph=" -&gt; match m.Spaces.[3].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="5944:6608" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="6024:6581" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="6226:6563" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="6414:6563" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="6659:7420" ph=" -&gt; match m.Spaces.[4].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="6720:7385" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="6800:7358" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="7003:7340" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="7191:7340" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="7436:8196" ph=" -&gt; match m.Spaces.[5].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="7497:8161" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="7577:8134" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="7779:8116" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="7967:8116" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="8212:8972" ph=" -&gt; match m.Spaces.[6].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="8273:8937" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="8353:8910" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="8555:8892" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="8743:8892" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="8988:9748" ph=" -&gt; match m.Spaces.[7].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="9049:9713" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="9129:9686" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="9331:9668" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="9519:9668" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="9764:10524" ph=" -&gt; match m.Spaces.[8].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="9825:10489" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="9905:10462" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="10107:10444" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="10295:10444" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="10578:10869" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="10603:10869" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="10616:10799" ph="//ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function ..." />
+            <marker date="1557953079943" expanded="true" signature="10891:12108" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="10903:12107" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="10916:11069" ph="//ChangeShape calls function with coordinate parameter declared in the XAML ..." />
+            <marker date="1557953079943" expanded="true" signature="12124:23531" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="12143:12235" ph="= { ..." />
+            <marker date="1557953079943" expanded="true" signature="12297:13031" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="13048:13224" ph="= ..." />
+            <marker date="1557953079943" expanded="true" signature="13058:13224" ph="{   CurrentPlayer: Player  ..." />
+            <marker date="1557953079943" expanded="true" signature="13242:13421" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="13254:13420" ph="    ..." />
+            <marker date="1557953079943" expanded="true" signature="13436:13485" ph="= ..." />
+            <marker date="1557953079943" expanded="true" signature="13446:13485" ph="| ChangeShape of string ..." />
+            <marker date="1557953079943" expanded="true" signature="13577:14048" ph=" : Space list list =  ..." />
+            <marker date="1557953079943" expanded="true" signature="13612:14047" ph="[m.Spaces.[0]; m.Spaces.[1]; m.Spaces.[2]];  ..." />
+            <marker date="1557953079943" expanded="true" signature="14095:14590" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="14120:14407" ph=" = List.tryFind (fun (elem: Space list) -&gt; ..." />
+            <marker date="1557953079943" expanded="true" signature="14232:14401" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="14615:14891" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="14692:14891" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="14919:15065" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="14957:15065" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="15086:21977" ph=" =  ..." />
+            <marker date="1557953079943" expanded="true" signature="15110:21977" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="15127:15704" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="15189:15677" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="15253:15658" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="15354:15624" ph="position=(Left, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="15507:15624" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="15720:16497" ph=" -&gt; match m.Spaces.[1].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="15781:16462" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="15861:16435" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="16064:16401" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="16252:16401" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="16513:17290" ph=" -&gt; match m.Spaces.[2].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="16574:17255" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="16654:17228" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="16857:17194" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="17045:17194" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="17306:18066" ph=" -&gt; match m.Spaces.[3].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="17367:18031" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="17447:18004" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="17649:17986" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="17837:17986" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="18082:18843" ph=" -&gt; match m.Spaces.[4].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="18143:18808" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="18223:18781" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="18426:18763" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="18614:18763" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="18859:19619" ph=" -&gt; match m.Spaces.[5].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="18920:19584" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="19000:19557" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="19202:19539" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="19390:19539" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="19635:20395" ph=" -&gt; match m.Spaces.[6].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="19696:20360" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="19776:20333" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="19978:20315" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="20166:20315" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="20411:21171" ph=" -&gt; match m.Spaces.[7].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="20472:21136" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="20552:21109" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="20754:21091" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="20942:21091" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="21187:21947" ph=" -&gt; match m.Spaces.[8].state with ..." />
+            <marker date="1557953079943" expanded="true" signature="21248:21912" ph=" -&gt;  ..." />
+            <marker date="1557953079943" expanded="true" signature="21328:21885" ph=" ={m with  ..." />
+            <marker date="1557953079943" expanded="true" signature="21530:21867" ph="position=(CenterH, Top);  ..." />
+            <marker date="1557953079943" expanded="true" signature="21718:21867" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="22001:22292" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="22026:22292" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="22039:22222" ph="//ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function ..." />
+            <marker date="1557953079943" expanded="true" signature="22314:23531" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="22326:23530" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="22339:22492" ph="//ChangeShape calls function with coordinate parameter declared in the XAML ..." />
+            <marker date="1557953079943" expanded="true" signature="23543:24671" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="23561:23655" ph="=  ..." />
+            <marker date="1557953079943" expanded="true" signature="23572:23655" ph="{   ..." />
+            <marker date="1557953079943" expanded="true" signature="23672:23755" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="23683:23755" ph="{   PvPWin = PvPWin.init  ..." />
+            <marker date="1557953079943" expanded="true" signature="23770:23873" ph="= ..." />
+            <marker date="1557953079943" expanded="true" signature="23780:23873" ph="| ShowWin1 ..." />
+            <marker date="1557953079943" expanded="true" signature="23894:24094" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="23949:24093" ph=" -&gt; ..." />
+            <marker date="1557953079943" expanded="true" signature="24115:24318" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="24170:24317" ph=" -&gt; ..." />
+            <marker date="1557953079943" expanded="true" signature="24340:24499" ph=" =   ..." />
+            <marker date="1557953079943" expanded="true" signature="24367:24499" ph=" ..." />
+            <marker date="1557953079943" expanded="true" signature="24532:24671" ph=" = ..." />
+            <marker date="1557953079943" expanded="true" signature="24544:24670" ph="  ..." />
+            <marker date="1557953079943" expanded="true" signature="24717:24915" ph=" =  ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

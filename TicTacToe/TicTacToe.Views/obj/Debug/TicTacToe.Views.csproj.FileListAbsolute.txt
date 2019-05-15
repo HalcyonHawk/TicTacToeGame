@@ -46,7 +46,6 @@ C:\Users\hdudo\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacT
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\bin\Debug\TicTacToe.Views.exe.config
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\bin\Debug\TicTacToe.Views.exe
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\bin\Debug\TicTacToe.Views.pdb
-C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.csprojAssemblyReference.cache
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainWindow.g.cs
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\App.g.cs
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views_MarkupCompile.cache
@@ -59,5 +58,4 @@ C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTac
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.exe
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.pdb
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.g.cs
-C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.baml
