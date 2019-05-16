@@ -10,7 +10,7 @@ open TicTacToe.Views
 ////game design
 //module TicTacToeDesign =
 //players X and O
-type Player = PlayerX | PlayerO | None
+type Player = PlayerX | PlayerO 
 
 //board positions
 //board made of horizontal and vertical components
@@ -47,7 +47,6 @@ module PvPWin =
 
     type Model =
         {   CurrentPlayer: Player 
-            Shape: string
             Spaces: PersistentVector<Space>
             PlayerXScore: int
             PlayerOScore: int
@@ -57,7 +56,6 @@ module PvPWin =
     let init () =
         {   
             CurrentPlayer = PlayerX
-            Shape = "cross.jpg"
             Spaces = Spaces
             PlayerXScore = 0
             PlayerOScore = 0
@@ -67,7 +65,6 @@ module PvPWin =
     let restoreInit (xScore, oScore, winner) =
         {   
             CurrentPlayer = PlayerX
-            Shape = "cross.jpg"
             Spaces = Spaces
             PlayerXScore = xScore
             PlayerOScore = oScore
@@ -281,7 +278,6 @@ module PvAIWin =
         image : string
     }
 
-    //TODO: Try seperate from model GameState
     let Spaces = 
         empty
         |> conj {position = (Left, Top); state = Empty; image = "dash.png"}
@@ -296,23 +292,33 @@ module PvAIWin =
 
     type Model =
         {   CurrentPlayer: Player 
-            Shape: string
             Spaces: PersistentVector<Space>
             PlayerXScore: int
             PlayerOScore: int
+            Winner: String
         }
 
     let init () =
         {   
             CurrentPlayer = PlayerX
-            Shape = "cross.jpg"
             Spaces = Spaces
             PlayerXScore = 0
             PlayerOScore = 0
+            Winner = ""
+        }
+
+    let restoreInit (xScore, oScore, winner) =
+        {   
+            CurrentPlayer = PlayerX
+            Spaces = Spaces
+            PlayerXScore = xScore
+            PlayerOScore = oScore
+            Winner = winner
         }
 
     type Msg =
         | ChangeShape of string
+        | AIMove
         | Reset 
     
     
@@ -327,6 +333,17 @@ module PvAIWin =
             [m.Spaces.[0]; m.Spaces.[4]; m.Spaces.[8]];
             [m.Spaces.[2]; m.Spaces.[4]; m.Spaces.[6]]]
    
+    //List of all spaces in the passed model
+    let allSpaces m = [m.Spaces.[0]; 
+                      m.Spaces.[1];
+                      m.Spaces.[2]; 
+                      m.Spaces.[3]; 
+                      m.Spaces.[4]; 
+                      m.Spaces.[5]; 
+                      m.Spaces.[6]; 
+                      m.Spaces.[7]; 
+                      m.Spaces.[8]]
+
     let isRowTaken (list: Space list list) =
         let matchedRow = List.tryFind (fun (elem: Space list) ->
             match elem.[0].state, elem.[1].state, elem.[2].state with
@@ -341,17 +358,35 @@ module PvAIWin =
     let checkGameWon m = 
         let record = m
         match isRowTaken (allPossibleLines m) with 
-            | Taken PlayerX -> {record with PlayerXScore = record.PlayerXScore + 1}
-            | Taken PlayerO -> {record with PlayerOScore = record.PlayerOScore + 1}
+            | Taken PlayerX -> restoreInit (m.PlayerXScore + 1, m.PlayerOScore, "X Wins")
+            | Taken PlayerO -> restoreInit (m.PlayerXScore, m.PlayerOScore + 1, "O Wins")
             | Empty -> record
+  
     
+
+    let rand = new System.Random()
+
+    let randSpace m = 
+        let spaceCoordinates = ["0x0", m.Spaces.[0];
+            "0x1", m.Spaces.[1];
+            "0x2", m.Spaces.[2]; 
+            "1x0", m.Spaces.[3]; 
+            "1x1", m.Spaces.[4];
+            "1x2", m.Spaces.[5]; 
+            "2x0", m.Spaces.[6]; 
+            "2x1", m.Spaces.[7]; 
+            "2x2", m.Spaces.[8]] |> Map.ofList
+        let emptySpaces = spaceCoordinates |> Map.filter (fun key value -> value.state = Empty) 
+        let emptySpaceList = Map.toList emptySpaces
+        fst emptySpaceList.[rand.Next(emptySpaceList.Length)]
+
     let changePlayer m = 
         match m.CurrentPlayer with
         | PlayerX -> {m with CurrentPlayer = PlayerO}
         | PlayerO -> {m with CurrentPlayer = PlayerX}
 
 
-    let doMove p m = 
+    let doMove p m= 
         match p with 
         | "0x0" -> match m.Spaces.[0].state with
                     | Empty -> 
@@ -478,13 +513,15 @@ module PvAIWin =
                         x
                     | Taken _ -> m
         | _ -> changePlayer m 
-
+    
+   
 
     let update msg m =
         match msg with
             //ChangeShape message passes coordinates of pressed button as parameter p, turn is handled in doMove function
             //doMove takes then position and current model as paramenters
-            | ChangeShape p -> doMove p m
+            | ChangeShape p -> if m.CurrentPlayer = PlayerX then doMove p m else m
+            | AIMove -> if (allSpaces m |> List.filter (fun x -> x.state = Taken PlayerX || x.state = Taken PlayerO)) |> List.length <> 9 && m.CurrentPlayer = PlayerO then doMove (randSpace m) m else m
             | Reset -> init ()
 
     //Removed parameters, added ()
@@ -506,6 +543,7 @@ module PvAIWin =
             "PlayerXScore" |> Binding.oneWay (fun m -> m.PlayerXScore)
             "PlayerOScore" |> Binding.oneWay (fun m -> m.PlayerOScore)
             "Reset" |> Binding.cmd (fun _ -> Reset)
+            "AIMove" |> Binding.cmd(fun _ -> AIMove)
         
         ]
 module LeaderboardWin =
