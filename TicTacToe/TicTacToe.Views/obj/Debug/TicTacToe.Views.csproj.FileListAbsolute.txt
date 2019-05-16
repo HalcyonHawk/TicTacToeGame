@@ -59,3 +59,6 @@ C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTac
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.pdb
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.g.cs
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\MainMenu.baml
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\TicTacToe.Views.csprojAssemblyReference.cache
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\AIGameWin.g.cs
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe.Views\obj\Debug\AIGameWin.baml

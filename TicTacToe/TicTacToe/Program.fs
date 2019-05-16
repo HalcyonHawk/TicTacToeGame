@@ -51,6 +51,7 @@ module PvPWin =
             Spaces: PersistentVector<Space>
             PlayerXScore: int
             PlayerOScore: int
+            Winner: String
         }
     
     let init () =
@@ -60,6 +61,17 @@ module PvPWin =
             Spaces = Spaces
             PlayerXScore = 0
             PlayerOScore = 0
+            Winner = ""
+        }
+
+    let restoreInit (xScore, oScore, winner) =
+        {   
+            CurrentPlayer = PlayerX
+            Shape = "cross.jpg"
+            Spaces = Spaces
+            PlayerXScore = xScore
+            PlayerOScore = oScore
+            Winner = winner
         }
 
     type Msg =
@@ -92,8 +104,8 @@ module PvPWin =
     let checkGameWon m = 
         let record = m
         match isRowTaken (allPossibleLines m) with 
-            | Taken PlayerX -> {record with PlayerXScore = record.PlayerXScore + 1}
-            | Taken PlayerO -> {record with PlayerOScore = record.PlayerOScore + 1}
+            | Taken PlayerX -> restoreInit (m.PlayerXScore + 1, m.PlayerOScore, "X Wins")
+            | Taken PlayerO -> restoreInit (m.PlayerXScore, m.PlayerOScore + 1, "O Wins")
             | Empty -> record
     
     let changePlayer m = 
@@ -156,7 +168,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "1x1" -> match m.Spaces.[4].state with
@@ -170,7 +182,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "1x2" -> match m.Spaces.[5].state with
@@ -184,7 +196,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x0" -> match m.Spaces.[6].state with
@@ -198,7 +210,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x1" -> match m.Spaces.[7].state with
@@ -212,7 +224,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x2" -> match m.Spaces.[8].state with
@@ -226,7 +238,7 @@ module PvPWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | _ -> changePlayer m 
@@ -257,6 +269,7 @@ module PvPWin =
             "CurrentPlayer" |> Binding.oneWay (fun m -> if m.CurrentPlayer = PlayerX then "cross.png" else "circle.jpg")
             "PlayerXScore" |> Binding.oneWay (fun m -> m.PlayerXScore)
             "PlayerOScore" |> Binding.oneWay (fun m -> m.PlayerOScore)
+            "Winner" |> Binding.oneWay (fun m -> m.Winner)
             "Reset" |> Binding.cmd (fun _ -> Reset)
         
         ]
@@ -340,19 +353,18 @@ module PvAIWin =
 
     let doMove p m = 
         match p with 
-        | "0x0" -> 
-        match m.Spaces.[0].state with
-            | Empty -> 
-                let record = m.Spaces
-                let x ={m with 
-                            Spaces = 
-                                record |> update 0 {position=(Left, Top); 
-                                state=Taken m.CurrentPlayer; 
-                                image = if m.CurrentPlayer = PlayerX 
-                                        then "cross.png" 
-                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
-                x
-            | Taken _ -> m
+        | "0x0" -> match m.Spaces.[0].state with
+                    | Empty -> 
+                        let record = m.Spaces
+                        let x ={m with 
+                                    Spaces = 
+                                        record |> update 0 {position=(Left, Top); 
+                                        state=Taken m.CurrentPlayer; 
+                                        image = if m.CurrentPlayer = PlayerX 
+                                                then "cross.png" 
+                                                else "circle.jpg"}} |> checkGameWon |> changePlayer 
+                        x
+                    | Taken _ -> m
         | "0x1" -> match m.Spaces.[1].state with
                     | Empty -> 
                         let record = m.Spaces
@@ -392,7 +404,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "1x1" -> match m.Spaces.[4].state with
@@ -406,7 +418,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "1x2" -> match m.Spaces.[5].state with
@@ -420,7 +432,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x0" -> match m.Spaces.[6].state with
@@ -434,7 +446,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x1" -> match m.Spaces.[7].state with
@@ -448,7 +460,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | "2x2" -> match m.Spaces.[8].state with
@@ -462,7 +474,7 @@ module PvAIWin =
                                                 state=Taken m.CurrentPlayer; 
                                                 image = if m.CurrentPlayer = PlayerX 
                                                         then "cross.png" 
-                                                        else "circle.jpg"}} |> changePlayer 
+                                                        else "circle.jpg"}} |> checkGameWon |> changePlayer 
                         x
                     | Taken _ -> m
         | _ -> changePlayer m 
@@ -512,7 +524,7 @@ module App =
         | ShowWin1
         | ShowWin2
         | PvPMsg of PvPWin.Msg
-
+        | PvAIMsg of PvAIWin.Msg
 
     let showWin1 () =
         Application.Current.Dispatcher.Invoke(fun () ->
@@ -522,7 +534,7 @@ module App =
 
     let showWin2 () =
         Application.Current.Dispatcher.Invoke(fun () ->
-            let pvaiWin = MainWindow()
+            let pvaiWin = AIGameWin()
             pvaiWin.DataContext <- Application.Current.MainWindow.DataContext
             pvaiWin.Show())
 
@@ -531,13 +543,14 @@ module App =
             | ShowWin1 -> m, Cmd.OfFunc.attempt showWin1 () raise
             | ShowWin2 -> m, Cmd.OfFunc.attempt showWin2 () raise
             | PvPMsg msg' -> { m with PvPWin = PvPWin.update msg' m.PvPWin }, Cmd.none
+            | PvAIMsg msg' -> { m with PvAIWin = PvAIWin.update msg' m.PvAIWin }, Cmd.none
 
     let bindings model dispatch =
         [ 
-            "PvAI" |> Binding.cmd (fun m -> ShowWin1)
-            "PvP" |> Binding.cmd (fun m -> ShowWin2)
+            "PvP" |> Binding.cmd (fun m -> ShowWin1)
+            "PvAI" |> Binding.cmd (fun m -> ShowWin2)
             "MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
-            //"MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
+            "AIGameWin" |> Binding.subModel (fun m -> m.PvAIWin) PvAIWin.bindings PvAIMsg
         ]
     
 [<EntryPoint; STAThread>]

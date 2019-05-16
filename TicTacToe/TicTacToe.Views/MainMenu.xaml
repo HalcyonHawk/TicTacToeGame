@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="450">
+        Title="MainMenu" Height="470" Width="450">
     <Grid>
-        <Button Content="Player vs AI" VerticalAlignment="Top" HorizontalAlignment="Center" Command="{Binding PvAI}" Width="161" FontSize="20" Margin="137,146,144,0" />
-        <Button Content="Player vs Player" VerticalAlignment="Top" HorizontalAlignment="Center" Command="{Binding PvP}" Width="161" FontSize="20" Margin="137,228,144,0"/>
+        <Label Content="Tic-Tac-Toe" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+        <Button Content="Player vs Player" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding PvP}" Width="162" FontSize="20" Margin="0,145,0,243" />
+        <Button Content="Player vs AI" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding PvAI}" Width="162" FontSize="20" Margin="0,229,0,159" />
 
     </Grid>
 </Window>
