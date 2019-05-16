@@ -301,7 +301,7 @@ module PvAIWin =
             PlayerXScore: int
             PlayerOScore: int
         }
-    //Maybe added ()?
+
     let init () =
         {   
             CurrentPlayer = PlayerX
@@ -508,49 +508,85 @@ module PvAIWin =
             "Reset" |> Binding.cmd (fun _ -> Reset)
         
         ]
+module LeaderboardWin =
+    type Model = 
+        {  
+            player: Player
+        }
+
+    let init () =
+        {
+            player = PlayerX
+        }
+
+    type Msg =
+        | Message
+
+    let update msg m =
+        match msg with
+            | Message -> init ()
+
+    let bindings () =
+        [ 
+            "Message" |> Binding.cmd (fun m -> Message )
+        ]
 
 module App =
     type Model = 
         {  
             PvPWin : PvPWin.Model 
             PvAIWin: PvAIWin.Model
+            LeaderboardWin: LeaderboardWin.Model
         }
 
     let init () =
         {   PvPWin = PvPWin.init ()
-            PvAIWin = PvAIWin.init () }, Cmd.none
+            PvAIWin = PvAIWin.init () 
+            LeaderboardWin = LeaderboardWin.init ()}, Cmd.none
 
     type Msg =
         | ShowWin1
         | ShowWin2
+        | ShowLeaderboard
         | PvPMsg of PvPWin.Msg
         | PvAIMsg of PvAIWin.Msg
+        | LeaderboardMsg of LeaderboardWin.Msg
 
-    let showWin1 () =
+    let showPvpWin () =
         Application.Current.Dispatcher.Invoke(fun () ->
             let pvpWin = MainWindow()
             pvpWin.DataContext <- Application.Current.MainWindow.DataContext
             pvpWin.Show())
 
-    let showWin2 () =
+    let showPvaiWin () =
         Application.Current.Dispatcher.Invoke(fun () ->
             let pvaiWin = AIGameWin()
             pvaiWin.DataContext <- Application.Current.MainWindow.DataContext
             pvaiWin.Show())
 
+    let showLeaderboard () =
+        Application.Current.Dispatcher.Invoke(fun () ->
+            let leaderboardWin = LeaderboardWindow()
+            leaderboardWin.DataContext <- Application.Current.MainWindow.DataContext
+            leaderboardWin.Show())
+
     let update msg m =  
         match msg with
-            | ShowWin1 -> m, Cmd.OfFunc.attempt showWin1 () raise
-            | ShowWin2 -> m, Cmd.OfFunc.attempt showWin2 () raise
+            | ShowWin1 -> m, Cmd.OfFunc.attempt showPvpWin () raise
+            | ShowWin2 -> m, Cmd.OfFunc.attempt showPvaiWin () raise
+            | ShowLeaderboard -> m, Cmd.OfFunc.attempt showLeaderboard () raise
             | PvPMsg msg' -> { m with PvPWin = PvPWin.update msg' m.PvPWin }, Cmd.none
             | PvAIMsg msg' -> { m with PvAIWin = PvAIWin.update msg' m.PvAIWin }, Cmd.none
+            | LeaderboardMsg msg' -> { m with LeaderboardWin = LeaderboardWin.update msg' m.LeaderboardWin }, Cmd.none
 
     let bindings model dispatch =
         [ 
             "PvP" |> Binding.cmd (fun m -> ShowWin1)
             "PvAI" |> Binding.cmd (fun m -> ShowWin2)
+            "Leaderboard" |> Binding.cmd (fun m -> ShowLeaderboard)
             "MainWindow" |> Binding.subModel (fun m -> m.PvPWin) PvPWin.bindings PvPMsg
             "AIGameWin" |> Binding.subModel (fun m -> m.PvAIWin) PvAIWin.bindings PvAIMsg
+            "LeaderboardWin" |> Binding.subModel (fun m -> m.LeaderboardWin) LeaderboardWin.bindings LeaderboardMsg
         ]
     
 [<EntryPoint; STAThread>]
