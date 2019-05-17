@@ -51,7 +51,7 @@
     <None Include="App.config" />
     <Content Include="packages.config" />
     <None Include="leaderboard.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
