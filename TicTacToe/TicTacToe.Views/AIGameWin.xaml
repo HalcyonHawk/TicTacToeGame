@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
         Title="TicTacToe - PvAI" Height="600" Width="400">
-    <Grid DataContext="{Binding AIGameWin}" ShowGridLines="True" Width="400" VerticalAlignment="Top">
+    <Window.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid DataContext="{Binding AIGameWin}" ShowGridLines="False" Width="400" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -73,6 +78,31 @@
         <Label Content="{Binding PlayerOScore}" FontSize="21" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom"/>
         <Button Content="Reset" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding Reset}" Height="30" Width="60"/>
         <Label Content="Player Vs AI" Grid.Row="5" Grid.Column="1" FontSize="17.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Content="End Turn" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AIMove}" Height="30" Width="60" Margin="34,22,39,23"/>
+        <Label Content="{Binding Winner}" FontSize="21" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+        <Button Content="End Turn|Do AI Turn" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AIMove}" Height="30" Width="120" />
+        <Label Content="Press to do AI turn" Grid.Row="5" Grid.Column="0" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Button Content="Save Score" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ShowScoreWin}" Height="30" Width="70" Grid.Column="2"/>
+        <Rectangle
+            Grid.RowSpan="6"
+            Grid.ColumnSpan="3"
+        Fill="Black"
+        Opacity="0.6"
+        Visibility="{Binding DialogVisible, Converter={StaticResource VisibilityConverter}}" />
+        <Border
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="3"
+        BorderBrush="Black"
+        BorderThickness="2"
+        Width="350"
+        Height="200"
+        Visibility="{Binding DialogVisible, Converter={StaticResource VisibilityConverter}}">
+            <StackPanel Background="White">
+                <local:NameEntry
+            DataContext="{Binding NameEntry}"
+            Visibility="{Binding DataContext.NameEntryVisible,
+                         RelativeSource={RelativeSource AncestorType=Window},
+                         Converter={StaticResource VisibilityConverter}}" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

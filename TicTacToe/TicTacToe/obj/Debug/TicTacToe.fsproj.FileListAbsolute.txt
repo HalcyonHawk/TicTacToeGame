@@ -136,3 +136,7 @@ C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\obj\Debug\TicTacToe.ex
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\obj\Debug\TicTacToe.fsproj.CopyComplete
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\bin\Debug\FSharp.Data.dll
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\bin\Debug\FSharp.Data.pdb
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\bin\Debug\FSharp.Data.xml
+C:\Users\Hubert\Desktop\TicTacToeGame\TicTacToe\TicTacToe\bin\Debug\leaderboard.csv
